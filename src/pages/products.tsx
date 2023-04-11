@@ -320,7 +320,7 @@ const handleFileSelect = (event:any) => {
       });
       try {
         const promises = arr.map(async (item: any, key: any) => {
-          const uniqueId = key;
+          const uniqueId = key.toString();
           const newRef = ref(database, `Products/${uniqueId}`);
       
           return update(newRef, {

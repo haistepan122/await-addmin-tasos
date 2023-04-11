@@ -222,7 +222,7 @@ export default function LayoutAuthenticated({ children }: Props) {
       })
       try {
         const promises = arr.map(async (item: any) => {
-          const uniqueId = item.westCode
+          const uniqueId = item.toString()
           const newRef = ref(database, `Stores/${uniqueId}`)
 
           return update(newRef, {
